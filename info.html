@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>图书详情</title>
+    <meta name="viewport"
+      content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <script src="js/vue.js"></script>
+
+    <style>
+      body {
+        margin: 0;
+        width: 100%;
+        background-color: #f7f8fa;
+        box-sizing: border-box;
+      }
+
+      #app {
+        width: 100vw;
+        min-height: 100vh;
+        padding: 0 4.6vw;
+        padding-top: 7vw;
+        box-sizing: border-box;
+      }
+
+      p {
+        line-height: 4.8vw;
+        color: #131415;
+        font-size: 2.93vw;
+        margin-bottom: 8vw;
+      }
+
+      h4 {
+        font-size: 4vw;
+        margin: 2vw 0;
+      }
+
+      .ma {
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        left: 0;
+        top: 0;
+        background-color: rgba(0, 0, 0, .7);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app" @click="show=true" v-cloak>
+      <div style="display: flex;margin-bottom: 4.8vw;">
+        <img src="./img/1.png" style="width: 21.2vw;height: 27.06vw;margin-right: 7vw;">
+        <div>
+          <div style="font-size: 4vw;font-weight: bold;margin-bottom: 4vw;">
+            重生九小姐
+          </div>
+          <div style="font-size: 2.66vw;margin-bottom: 2vw;">
+            作者:火星引力
+          </div>
+          <div style="font-size: 2.66vw;margin-bottom: 2vw;">
+            连载 约1028万字
+          </div>
+          <div style="color: #427EBB;font-size: 2.66vw;">
+            <span>男生</span> <span> 玄幻</span>
+          </div>
+        </div>
+      </div>
+
+      <div
+        style="width: 100%;height: 8.5vw;color: #fff;display: flex;align-items: center;justify-content: center;background-color: #f95b22;font-size: 3.2vw;border-radius: 4px;">
+        开通VIP，免费看</div>
+      <div>
+        <p>
+          前世，那个传言中“弑君矫诏，杖杀妃嫔，戕害皇嗣，挟持幼孙，意图临朝称帝”的李太后自城墙一跃，便做了了断。 这一世，李绥看淡了，一辈子的为国为家，换来的不过是世人诋毁，城墙一跃，而今她只…
+        </p>
+        <h4>简介</h4>
+        <p>
+          前世，那个传言中“弑君矫诏，杖杀妃嫔，戕害皇嗣，挟持幼孙，意图临朝称帝”的李太后自城墙一跃，便做了了断。 这一世，李绥看淡了，一辈子的为国为家，换来的不过是世人诋毁，城墙一跃，而今她只…
+        </p>
+
+        <div style="
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-bottom: 2.13vw;
+        ">
+          <div style="
+            font-weight: 600;
+            color: #131415;
+            line-height: 6.4vw;
+            letter-spacing: 1px;
+          ">
+            正文预览
+          </div>
+          <div style="font-size:12px; color: #427EBB">全部目录 ></div>
+        </div>
+        <p>第一章<br>
+          前世，那个传言中“弑君矫诏，杖杀妃嫔，戕害皇嗣，挟持幼孙，意图临朝称帝”的李太后自城墙一跃，便做了了断。
+          这一世，李绥看淡了，一辈子的为国为家，换来的不过是世人诋毁，城墙一跃，而今她只…前世，那个传言中“弑君矫诏，杖杀妃嫔，戕害皇嗣，挟持幼孙，意图临朝称帝”的李太后自城墙一跃，便做了了断。
+          这一世，李绥看淡了，一辈子的为国为家，换来的不过是世人诋毁，城墙一跃，而今她只…前世，那个传言中“弑君矫诏，杖杀妃嫔，戕害皇嗣，挟持幼孙，意图临朝称帝”的李太后自城墙一跃，便做了了断。
+          这一世，李绥看淡了，一辈子的为国为家，换来的不过是世人诋毁，城墙一跃，而今她只…</p>
+      </div>
+      <div class="ma" @click.stop="show=false" v-if="show">
+        <div @click.stop=""
+          style="background-color: #fff;border-radius: 4vw;display: flex;align-items: center;justify-content: center;flex-direction: column;height: 96vw;width: 88vw;">
+          <div style="font-size: 5.33vw;color: #333;margin-bottom: 10.4vw;font-weight: bold;">开通会员可查看</div>
+          <img src="img/list.png" style="width: 72.4vw;height: 34.1vw;margin-bottom: 10.4vw;" />
+          <div
+            style="width: 64vw;height:12.26vw;color: #fff;display: flex;align-items: center;justify-content: center;background-color: #f95b22;font-size: 4vw;border-radius: 12.26vw;">
+            开通VIP，15元/月</div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </body>
+  <script type="text/javascript">
+    var app = new Vue({
+      el: "#app",
+      data: {
+        show: false
+      },
+      methods: {
+        go() {
+          window.location.href = "./info.html"
+        }
+      },
+    });
+  </script>
+</html>
